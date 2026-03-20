@@ -15,7 +15,7 @@ let pyodideReady = (async () => {
     await pyodide.runPythonAsync(`
         import micropip
         await micropip.install("biopython")
-        await micropip.install("./packages/wa_entrez-1.0.0-py3-none-any.whl")
+        await micropip.install("https://ainaescobet.github.io/wa_entrez/wa_entrez-1.0.0-py3-none-any.whl")
     `);
 
     console.log("Packages installed")
