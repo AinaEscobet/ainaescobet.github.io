@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <h1>BD: PubMed</h1>
+
+            <div class="search">
+                <input type="text" id="pmid" placeholder="Enter PMID">
+                <button onclick="runPubMedApp()">Run</button>
+            </div>
+
+            <button id="download-btn-pubmed" disabled onclick="download()">Download Results</button>
+        </div>
+
+        <div class="results" id="results" style="display:none;">
+            <h2>Results:</h2>
+            <div id="pubmed-output"></div>
+        </div>
+    </div>
+
+    <div class="app">
+        <div class="container">
+            <h1>BD: Genomics</h1>
+
+            <div class="search">
+                <input type="text" id="genome" placeholder="Enter Genome">
+                <button onclick="runGenomicsApp()">Run</button>
+            </div>
+
+            <button id="download-btn-genomics" disabled onclick="download()">Download Results</button>
+        </div>
+
+        <div class="results" id="genomics-results" style="display:none;">
+            <h2>Results:</h2>
+            <div id="genomics-output"></div>
+        </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

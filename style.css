@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:#f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 0;
+  color: #222;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: auto;
+
+}
+.container {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  width: 420px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}
+
+.search {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.search input[type="text"] {
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  flex: 1; 
+}
+
+.search input[type="text"]:focus {
+  outline: none;
+  border-color: #000;
+}
+
+
+
+.search button {
+  padding: 0.6rem 1.2rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.search button:hover {
+  background-color: #444;
+}
+
+
+#download-btn-pubmed, #download-btn-genomics {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.25s ease;
+}
+
+
+#download-btn-pubmed:disabled, #download-btn-genomics:disabled {
+  background-color: #bbb;
+}
+
+/* #download-btn-genomics:disabled {
+  background-color: #bbb;
+} */
+
+.results {
+  width: 420px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  display: none;
+}
+
+.results h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.results p {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
