@@ -18,13 +18,18 @@ def fetch_pubmed():
         f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id={pmid}&retmode=xml"
     )
     
+    client = WAEntrezClient(email="test@example.com")
+    result = client.wa_efetch(db="pubmed", id=pmid, rettype="xml", retmode="text")
+    
 
     # Request the data from the URL
-    response = open_url(url)
-    xml_data = response.read()
+    # response = open_url(url)
+    # xml_data = response.read()
+    
+    
 
     # Parse the XML data
-    root = ET.fromstring(xml_data)
+    root = ET.fromstring(result)
     article = root.find(".//PubmedArticle")
     
     if article is None:
